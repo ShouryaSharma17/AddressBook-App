@@ -47,6 +47,18 @@ const createAddressBook = () => {
     return addressBookData;
 }
 
+function createAndUpdateStorage(addressBookData){
+    let addressBookList = JSON.parse(localStorage.getItem("AddressBookList"));
+    if(addressBookList != undefined){
+        addressBookList.push(addressBookData);
+    }
+    else{
+        addressBookList = [addressBookData];
+    }
+    alert(addressBookList.toString());
+    localStorage.setItem("AddressBookList", JSON.stringify(addressBookList));
+}
+
 const getInputValuesById = (id) => {
     let value = document.querySelector(id).value;
     return value;
