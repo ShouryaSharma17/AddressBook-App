@@ -149,8 +149,9 @@ error-output {
     background: #FFFFFF;
     opacity: 1;
     margin-bottom: 10px;
-    padding-left: 400px;
+    padding-left: 150px;
     margin-top: 20px;
+    align-items: center;
 }
 
 .button {
@@ -165,10 +166,12 @@ error-output {
     padding: 7px 7px;
     border: 1px solid #707070;
     cursor: pointer;
+    align-items: center;
 }
 
 .submitButton {
     border: 1px solid #42515f;
     border-radius: 5%;
     margin-right: 30px;
+    align-items: center;
 }
