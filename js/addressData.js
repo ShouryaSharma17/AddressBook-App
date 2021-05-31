@@ -16,6 +16,25 @@ class addressData {
         }
         else throw 'Phone Number is Incorrect!';
     }
+    get address(){ return this._address; }
+    set address(address){
+        let addressRegex = RegExp('^[a-zA-Z0-9_][a-zA-Z0-9_ ]{4,}$');
+        if( addressRegex.test(address)){
+            this._address=address;
+        }
+        else throw 'Invalid Address';  
+    }
+    
+    get city(){ return this._city; }
+    set city(city){
+        this._city=city;
+    }
+    
+    get state(){ return this._state; }
+    set state(state){
+        this._state=state;
+    }
+
     get zip(){ return this._zip; }
     set zip(zip){
         let zipRegex = RegExp('^[1-9]{1}[0-9]{2}[\\s]?[0-9]{3}$');
@@ -25,6 +44,8 @@ class addressData {
         else throw 'Invalid Zip-Code';  
     }
     toString(){
-        return "name = '"+this.name + ", phone = '"+ this.phoneNumber;
+        return "fullname = "+this.fullname + ", phone = " + this.phone + ", address =" + this.address +
+                        ", city = "+this.city+ ", state = " + this.state +", zip-code = " + this.zip; 
     }
+    
 }
