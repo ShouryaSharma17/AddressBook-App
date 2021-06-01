@@ -43,9 +43,4 @@ const remove = (node) => {
     createInnerHtml();
 }
 
-const update = (node) => {
-    let addressBookData = addressList.find(addressData => addressData._id == node.id);
-    if (!addressBookData) return;
-    localStorage.setItem('editAddress', JSON.stringify(addressBookData));
-    window.location.replace()
-}
+
