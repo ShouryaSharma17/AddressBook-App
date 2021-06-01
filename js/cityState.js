@@ -1285,7 +1285,7 @@ let stateCityObj = {
     ]
 }
 
-window.onload = function () {
+window.onload = function() {
     
     let stateSel = document.getElementById("state");
     let citySel = document.getElementById("city");
